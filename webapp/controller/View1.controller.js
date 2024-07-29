@@ -16,9 +16,9 @@ function (Controller,MessageToast) {
             try {
                 var oJsonObject = JSON.parse(sJsonInput);
 
-                // Check if the input is a stringified JSON object
+                
                 if (typeof oJsonObject === "string") {
-                    // Try to parse the stringified JSON object
+                   
                     JSON.parse(oJsonObject);
                     throw new Error("Input is already a stringified JSON object");
                 }
@@ -98,14 +98,14 @@ function (Controller,MessageToast) {
             try {
                 var oJsonObject = JSON.parse(sJsonOutput);
 
-                // Check if the JSON is already pretty-printed
+                
                 if (sJsonOutput.includes("\n")) {
-                    // Unformat JSON
+                    
                     var sUnformattedJson = JSON.stringify(oJsonObject);
                     oView.byId("stringOutput").setValue(sUnformattedJson);
                     
                 } else {
-                    // Format JSON
+                    
                     var sFormattedJson = JSON.stringify(oJsonObject, null, 4);
                     oView.byId("stringOutput").setValue(sFormattedJson);
                     
