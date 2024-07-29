@@ -54,14 +54,14 @@ function (Controller,MessageToast) {
             var sEscapedJsonString = oView.byId("jsonInput").getValue();
 
             try {
-                // Parse the escaped JSON string to get the original JSON string
+                
                 var sJsonString = JSON.parse(sEscapedJsonString);
-                // Parse the JSON string to get the JSON object
+                
                 var oJsonObject = JSON.parse(sJsonString);
-                // Pretty-print the JSON object
-                // var sPrettyJson = JSON.stringify(oJsonObject, null, 4);
+                
+                
                 var sPrettyJson = JSON.stringify(oJsonObject);
-                // Set the result to the stringOutput TextArea
+                
                 oView.byId("stringOutput").setValue(sPrettyJson);
                 MessageToast.show("Reverse transformation successful!");
             } catch (e) {
@@ -103,12 +103,12 @@ function (Controller,MessageToast) {
                     // Unformat JSON
                     var sUnformattedJson = JSON.stringify(oJsonObject);
                     oView.byId("stringOutput").setValue(sUnformattedJson);
-                    MessageToast.show("JSON unformatted successfully!");
+                    
                 } else {
                     // Format JSON
                     var sFormattedJson = JSON.stringify(oJsonObject, null, 4);
                     oView.byId("stringOutput").setValue(sFormattedJson);
-                    MessageToast.show("JSON formatted successfully!");
+                    
                 }
             } catch (e) {
                 MessageToast.show("Invalid JSON content!");
