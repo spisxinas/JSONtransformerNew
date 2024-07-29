@@ -18,25 +18,33 @@
                                   style="Emphasized"/>   
                 
             <Button text="Clear" press="onClear" type="transparent"  />
-            </HBox>
+
+            </HBox >
              
 			<TextArea id="jsonInput" width="100%" placeholder="Enter JSON here..." rows="15" />
-    
-            <HBox justifyContent="Center" width="100%" alignItems="Center">
+         <HBox width="100%"  justifyContent="SpaceBetween">
+
+             <ToolbarSpacer width="10px"></ToolbarSpacer >
+
+            <HBox justifyContent="Center"  alignItems="Center">
             <Button text="JSON TO STRING" press="onTransform" type="Emphasized"/>
             <ToolbarSpacer width="20px"/>
             <Button text="STRING TO JSON" press="onReverseTransform" type="Emphasized"/>
             </HBox>
 
-            <TextArea id="stringOutput" width="100%" placeholder="Resulting String will appear here..." rows="15" editable="false"/>
-            
-            <HBox width="100%">
+            <HBox>
              <Button text="Download" press="onDownload" />
              <ToolbarSpacer />
              <Button text="Copy" press="onCopy" />
              <ToolbarSpacer />
              <Button text="Toggle Format" press="onToggleFormat" />      
             </HBox>
+        </HBox>
+            
+
+            <TextArea id="stringOutput" width="100%" placeholder="Resulting String will appear here..." rows="15" editable="false"/>
+            
+            
 
             
             

@@ -41,7 +41,7 @@ function (Controller,MessageToast) {
                 var url = URL.createObjectURL(blob);
                 var a = document.createElement("a");
                 a.href = url;
-                a.download = "jsonString.txt";
+                a.download = "JSONTransformer.txt";
                 a.click();
                 URL.revokeObjectURL(url);
                 MessageToast.show("Download started!");
