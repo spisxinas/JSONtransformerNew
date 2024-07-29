@@ -1,0 +1,47 @@
+<mvc:View controllerName="jsontransformer.controller.View1"
+     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:unified="sap.ui.unified"
+    >
+   <Page title="JSON Transformer Tool">
+        <VBox class="sapUiContentPadding" width="100%">
+            <HBox justifyContent="Center" width="100%">
+            <Title text="JSON Transformer Tool" level="H1" titleStyle="H1" />
+            </HBox>
+
+            <HBox width="100%" justifyContent="SpaceBetween">
+            <unified:FileUploader id="fileUploader" 
+                                  change="onFileUpload"                  
+                                  placeholder="Upload a file"
+                                  buttonText="Upload File"
+                                  style="Emphasized"/>   
+                
+            <Button text="Clear" press="onClear" type="transparent"  />
+            </HBox>
+             
+			<TextArea id="jsonInput" width="100%" placeholder="Enter JSON here..." rows="15" />
+    
+            <HBox justifyContent="Center" width="100%" alignItems="Center">
+            <Button text="JSON TO STRING" press="onTransform" type="Emphasized"/>
+            <ToolbarSpacer width="20px"/>
+            <Button text="STRING TO JSON" press="onReverseTransform" type="Emphasized"/>
+            </HBox>
+
+            <TextArea id="stringOutput" width="100%" placeholder="Resulting String will appear here..." rows="15" editable="false"/>
+            
+            <HBox width="100%">
+             <Button text="Download" press="onDownload" />
+             <ToolbarSpacer />
+             <Button text="Copy" press="onCopy" />
+             <ToolbarSpacer />
+             <Button text="Toggle Format" press="onToggleFormat" />      
+            </HBox>
+
+            
+            
+
+	  </VBox>
+    </Page>
+
+</mvc:View>
